@@ -1,0 +1,128 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  background: #fff;
+  color: #000;
+}
+
+header {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="text"], select {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.cart-btn {
+  background: #000;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.banner {
+  background: url('bg.jpeg') center/cover no-repeat;
+  padding: 180px;
+}
+
+.product-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.product:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.product img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+button {
+  background: #151516;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay, #order-form, #cart-modal {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.overlay.active, #order-form.active, #cart-modal.active {
+  display: block;
+}
+
+#cart-items div {
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+footer {
+  background: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #121212;
+  color: #0a0909;
+}
+
+body.dark header, body.dark footer {
+  background: #1e1e1e;
+}
+
+
+
